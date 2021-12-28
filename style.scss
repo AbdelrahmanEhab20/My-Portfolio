@@ -1,0 +1,703 @@
+/*Use The MIXIN File*/
+@use "External";
+/*###########  import google fonts ###### */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+/*######## global Style ######### */
+$main-color: darkgreen;
+$font-color: #fff;
+$dark-color: #000;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+/*######### Global styling For Section Tittles ####### */
+section {
+  padding: 80px 0;
+}
+section .tittle {
+  @include External.specialtittle();
+}
+section .tittle::before {
+  @include External.specialBefore();
+}
+section .tittle::after {
+  @include External.specialAfter();
+}
+/*######### Nav Bar styling ####### */
+.navbar {
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+  padding: 20px 0;
+  font-family: "Ubuntu", sans-serif;
+  transition: all 0.3 ease;
+}
+.navbar.sticky {
+  padding: 15px 0;
+  background: $main-color;
+}
+
+.fa-laptop {
+  color: $main-color;
+}
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+.navbar .logo a {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+.navbar .logo a span {
+  color: $main-color;
+  transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span {
+  color: black;
+}
+.navbar.sticky .menu li a {
+  &:hover {
+    color: $dark-color;
+  }
+}
+
+.navbar.sticky .fa-laptop {
+  color: black;
+}
+.navbar .menu li a {
+  display: block;
+  color: $font-color;
+  font-size: 18px;
+  font-weight: bolder;
+  margin-left: 25px;
+  transition: color 0.3 ease;
+  &:hover {
+    color: $main-color;
+  }
+}
+.home .home-content a {
+  display: inline-block;
+  background: $main-color;
+  color: $font-color;
+  font-size: 25px;
+  padding: 20px 20px;
+  margin-top: 20px;
+  font-weight: bolder;
+  border-radius: 6px;
+  border: 2px solid $main-color;
+  transition: all 0.3s ease;
+  &:hover {
+    color: $main-color;
+    background: none;
+  }
+}
+
+/*####### Menu BTN (Nav) styling ###### */
+
+.menu-btn {
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+/*######## Home Section styling ######## */
+.home {
+  display: flex;
+  background: url("imgs/lastbanner.jpg") no-repeat center;
+  height: 100vh;
+  color: #fff;
+  min-height: 500px;
+  font-family: "Ubuntu", sans-serif;
+}
+.home .max-width {
+  margin: auto 0 auto 40px;
+}
+.home .home-content .text-1 {
+  font-size: 50px;
+}
+.home .home-content .text-2 {
+  font-size: 75px;
+  font-weight: bolder;
+  margin-left: -3 px;
+}
+
+.home .home-content .text-3 {
+  font-size: 55px;
+  margin: 5px 0;
+}
+.home .home-content span {
+  color: $main-color;
+}
+
+/*######## About Section styling ######## */
+.about,
+.services,
+.work,
+.Testimonials,
+.contact,
+footer {
+  font-family: "Poppins", "sans-serif";
+}
+
+.about .tittle::after {
+  content: "Who I Am";
+}
+
+.about .about-content {
+  @include External.content();
+}
+.about .about-content .left {
+  width: 45%;
+}
+.about .about-content .left img {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border: 5px solid $main-color;
+  border-radius: 20px;
+}
+.about .about-content .right {
+  width: 55%;
+}
+.about .about-content .right .text {
+  font-size: 25px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+.about .about-content .right .text span {
+  color: $main-color;
+}
+.about .about-content .right p {
+  text-align: justify;
+}
+.about .about-content .right a {
+  display: inline-block;
+  background: $main-color;
+  color: $font-color;
+  font-size: 20px;
+  padding: 10px 30px;
+  margin-top: 20px;
+  font-weight: bolder;
+  border-radius: 6px;
+  border: 2px solid $main-color;
+  transition: all 0.3s ease;
+  &:hover {
+    color: $main-color;
+    background: none;
+  }
+}
+/*######## Services  Section styling ######## */
+.services .tittle::before {
+  background: $font-color;
+}
+.services .tittle::after {
+  background: $dark-color;
+  content: "What Can I Do";
+}
+.services {
+  background: $dark-color;
+  color: $font-color;
+}
+.services .services-content {
+  @include External.content();
+}
+
+.services .services-content .card {
+  width: calc(33% - 20px);
+  text-align: center;
+  background: rgb(34, 31, 31);
+  border-radius: 8px;
+  padding: 20px 25px;
+  &:hover {
+    background: $font-color;
+    color: $dark-color;
+  }
+}
+.services .services-content .card i {
+  font-size: 70px;
+  color: $main-color;
+}
+.services .services-content .card .text {
+  font-size: 20px;
+  font-weight: bolder;
+  margin: 15px;
+}
+.services .services-content .card .box {
+  transition: all 0.3s ease;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+/*######## My Projects  Section styling ######## */
+.work .tittle::after {
+  content: "Previous Work";
+}
+
+.work {
+  .work-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    .box {
+      height: 20rem;
+      width: 30rem;
+      border-radius: 5px;
+      box-shadow: 0 0 1rem #333;
+      align-items: center;
+      margin: 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.8s ease;
+      &:hover {
+        transform: scale(1.05);
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      button {
+        @include External.button();
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        height: 4rem;
+        width: 16rem;
+        z-index: 1;
+      }
+      &:hover button {
+        top: 40%;
+        color: #fff;
+        transform: translate(-50%, -50%);
+      }
+      &:hover img {
+        filter: blur(0.2rem);
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+/*######## Testimonials  Section styling ######## */
+.Testimonials {
+  background: $dark-color;
+  color: $font-color;
+}
+.Testimonials .tittle::before {
+  background: $font-color;
+}
+.Testimonials .tittle::after {
+  background: $dark-color;
+  content: "What Customers Say";
+}
+.Testimonials .carousel .card {
+  background: #333;
+  border-radius: 10px;
+  padding: 25px 35px;
+  text-align: center;
+  transition: all 0.8s ease;
+  &:hover {
+    transform: scale(1.05);
+    background: $font-color;
+    color: $dark-color;
+  }
+}
+
+.Testimonials .carousel .card .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.Testimonials .carousel .card img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 60%;
+  border: 5px solid $main-color;
+}
+.Testimonials .carousel .card .text {
+  font-size: 25px;
+  font-weight: bolder;
+  margin: 10px 0 7px 0;
+}
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+.owl-dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none !important;
+  border-radius: 50%;
+  border: 2px solid $main-color !important;
+  transition: all 0.3s ease;
+}
+.owl-dot.active {
+  width: 35px;
+  border-radius: 14px;
+  &:hover {
+    background: $main-color !important;
+  }
+}
+
+/*######## Contact  Section styling ######## */
+.contact {
+  .tittle::after {
+    content: "Get In Touch";
+  }
+  .contact-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .column {
+      width: calc(50% - 30px);
+    }
+    .text {
+      font-size: 20px;
+      font-weight: bolder;
+      margin-bottom: 10px;
+    }
+
+    .left {
+      p {
+        text-align: justify;
+      }
+
+      .icons {
+        margin: 20px 0;
+
+        .social {
+          .first,
+          .third {
+            color: rgb(11, 11, 158);
+            &:hover {
+              transition: all 0.3s ease;
+              opacity: 0.5;
+            }
+          }
+          .fourth {
+            color: $main-color;
+            &:hover {
+              transition: all 0.3s ease;
+              opacity: 0.5;
+            }
+          }
+          .second {
+            &:hover {
+              transition: all 0.3s ease;
+              opacity: 0.5;
+            }
+          }
+          font-size: 50px;
+        }
+      }
+    }
+
+    .row {
+      display: flex;
+      height: 65px;
+      align-items: center;
+
+      .info {
+        margin-left: 10px;
+      }
+      i {
+        font-size: 25px;
+        color: $main-color;
+      }
+    }
+
+    .info {
+      .head {
+        font-weight: bolder;
+      }
+      .sub-title {
+        color: $dark-color;
+      }
+    }
+  }
+  .right {
+    form {
+      .fields {
+        display: flex;
+        .field {
+          width: 100%;
+          height: 45px;
+          margin-bottom: 15px;
+        }
+      }
+      .field {
+        width: 100%;
+        height: 45px;
+        margin-bottom: 15px;
+        input {
+          @include External.inputArea();
+        }
+      }
+      .name {
+        margin-right: 10px;
+      }
+
+      .email {
+        margin-left: 10px;
+      }
+
+      .textarea {
+        height: 80px;
+        width: 100%;
+        textarea {
+          padding-top: 10px;
+          @include External.inputArea();
+          resize: none;
+        }
+      }
+      .button-area {
+        height: 47px;
+        width: 170px;
+
+        button {
+          width: 100%;
+          height: 100%;
+          border: 2px solid $main-color;
+          border-radius: 6px;
+          background: $main-color;
+          color: $font-color;
+          font-size: 20px;
+          font-weight: bolder;
+          &:hover {
+            color: $main-color;
+            background: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*######## Foooter  Section styling ######## */
+footer {
+  background: $dark-color;
+  color: $font-color;
+  padding: 20px 25px;
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+  a {
+    color: $main-color;
+    text-decoration: none;
+  }
+}
+/*######## Responsive Media Query ######## */
+
+@media (max-width: 1104px) {
+  .about .about-content .left img {
+    height: 350px;
+    width: 350px;
+  }
+  .home .home-content .text-1 {
+    font-size: 40px;
+  }
+  .home .home-content .text-2 {
+    font-size: 40px;
+  }
+  .home .home-content .text-3 {
+    font-size: 30px;
+  }
+}
+// @media (max-width: 1098px) {
+//   .navbar a {
+//     font-size: 20px;
+//   }
+//   .navbar .logo a {
+//     font-size: 20px;
+//   }
+//   .navbar .fa-laptop {
+//     font-size: 16px;
+//   }
+// }
+
+// @media (max-width: 1300px) {
+//   .home .max-width {
+//     margin-left: 0;
+//   }
+// }
+
+@media (max-width: 991px) {
+  .max-width {
+    padding: 0 50px;
+  }
+  .home .home-content .text-1 {
+    font-size: 40px;
+  }
+  .home .home-content .text-2 {
+    font-size: 40px;
+  }
+  .home .home-content .text-3 {
+    font-size: 30px;
+  }
+  .services .services-content .card .text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 947px) {
+  .menu-btn {
+    display: block;
+    z-index: 999;
+  }
+  .menu-btn i.active:before {
+    content: "\f00d";
+  }
+  .navbar .menu {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background: #111;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 80px;
+    transition: all 0.8s ease;
+  }
+  .navbar .menu.active {
+    left: 0;
+  }
+  .navbar .menu li {
+    display: block;
+  }
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 30px;
+    &:hover {
+      color: $main-color;
+      z-index: 999;
+    }
+  }
+  .home .home-content .text-1 {
+    font-size: 30px;
+  }
+  .home .home-content .text-2 {
+    font-size: 40px;
+  }
+  .home .home-content .text-3 {
+    font-size: 30px;
+  }
+  .home .home-content a {
+    font-size: 20px;
+    padding: 15px 10px;
+  }
+  .max-width {
+    max-width: 800px;
+  }
+  .about .about-content .column {
+    width: 100%;
+  }
+  .about .about-content .left {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+  }
+  .about .about-content .right {
+    flex: 100%;
+  }
+  .services .services-content .card .text {
+    font-size: 16px;
+  }
+  .services .services-content .card {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
+  footer {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home .home-content .text-1 {
+    font-size: 35px;
+  }
+  .home .home-content .text-2 {
+    font-size: 30px;
+  }
+  .home .home-content .text-3 {
+    font-size: 30px;
+  }
+  .services .services-content .card .text {
+    font-size: 16px;
+  }
+  .services .services-content .card,
+  .contact .contact-content .column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  footer {
+    font-size: 16px;
+  }
+}
+@media (max-width: 690px) {
+  .max-width {
+    padding: 0 23px;
+  }
+  .home .home-content .text-2 {
+    font-size: 40px;
+  }
+  .home .home-content .text-3 {
+    font-size: 30px;
+  }
+  .home .home-content a {
+    font-size: 20px;
+  }
+  .services .services-content .card .text {
+    font-size: 16px;
+  }
+  .services .services-content .card {
+    width: 100%;
+  }
+  footer {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  .home .home-content .text-2 {
+    font-size: 35px;
+  }
+  .home .home-content .text-3 {
+    font-size: 30px;
+  }
+  footer {
+    font-size: 14px;
+  }
+
+  .services .services-content .card .text {
+    font-size: 16px;
+  }
+}

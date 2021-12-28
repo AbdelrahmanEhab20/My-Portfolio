@@ -1,0 +1,63 @@
+@mixin specialtittle() {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-weight: bolder;
+  font-family: "Ubuntu", sans-serif;
+}
+@mixin specialBefore() {
+  content: "";
+  position: absolute;
+  width: 240px;
+  height: 3px;
+  left: 50%;
+  bottom: 0px;
+  background: #000;
+  transform: translateX(-50%);
+}
+
+@mixin specialAfter() {
+  position: absolute;
+  padding: 5px;
+  left: 50%;
+  bottom: -12px;
+  font-size: 20px;
+  color: darkgreen;
+  background: #fff;
+  transform: translateX(-50%);
+}
+
+@mixin button() {
+  outline: none;
+  border: none;
+  background: rgb(30, 179, 30);
+  color: #000;
+  border-radius: 10px;
+  font-size: 2rem;
+  font-weight: bolder;
+  margin: 2rem 0;
+  font-family: "Ubuntu", sans-serif;
+  &:hover {
+    background: #333;
+  }
+}
+@mixin content() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@mixin inputArea() {
+  height: 100%;
+  width: 100%;
+  border: 1px solid rgb(20, 231, 20);
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}

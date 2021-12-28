@@ -1,0 +1,784 @@
+/*Use The MIXIN File*/
+/*###########  import google fonts ###### */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+/*######## global Style ######### */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+/*######### Global styling For Section Tittles ####### */
+section {
+  padding: 80px 0;
+}
+
+section .tittle {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-weight: bolder;
+  font-family: "Ubuntu", sans-serif;
+}
+
+section .tittle::before {
+  content: "";
+  position: absolute;
+  width: 240px;
+  height: 3px;
+  left: 50%;
+  bottom: 0px;
+  background: #000;
+  transform: translateX(-50%);
+}
+
+section .tittle::after {
+  position: absolute;
+  padding: 5px;
+  left: 50%;
+  bottom: -12px;
+  font-size: 20px;
+  color: darkgreen;
+  background: #fff;
+  transform: translateX(-50%);
+}
+
+/*######### Nav Bar styling ####### */
+.navbar {
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+  padding: 20px 0;
+  font-family: "Ubuntu", sans-serif;
+  transition: all 0.3 ease;
+}
+
+.navbar.sticky {
+  padding: 15px 0;
+  background: darkgreen;
+}
+
+.fa-laptop {
+  color: darkgreen;
+}
+
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar .logo a {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.navbar .logo a span {
+  color: darkgreen;
+  transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a span {
+  color: black;
+}
+
+.navbar.sticky .menu li a:hover {
+  color: #000;
+}
+
+.navbar.sticky .fa-laptop {
+  color: black;
+}
+
+.navbar .menu li a {
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bolder;
+  margin-left: 25px;
+  transition: color 0.3 ease;
+}
+.navbar .menu li a:hover {
+  color: darkgreen;
+}
+
+.home .home-content a {
+  display: inline-block;
+  background: darkgreen;
+  color: #fff;
+  font-size: 25px;
+  padding: 20px 20px;
+  margin-top: 20px;
+  font-weight: bolder;
+  border-radius: 6px;
+  border: 2px solid darkgreen;
+  transition: all 0.3s ease;
+}
+.home .home-content a:hover {
+  color: darkgreen;
+  background: none;
+}
+
+/*####### Menu BTN (Nav) styling ###### */
+.menu-btn {
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+
+/*######## Home Section styling ######## */
+.home {
+  display: flex;
+  background: url("imgs/lastbanner.jpg") no-repeat center;
+  height: 100vh;
+  color: #fff;
+  min-height: 500px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.home .max-width {
+  margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1 {
+  font-size: 50px;
+}
+
+.home .home-content .text-2 {
+  font-size: 75px;
+  font-weight: bolder;
+  margin-left: -3 px;
+}
+
+.home .home-content .text-3 {
+  font-size: 55px;
+  margin: 5px 0;
+}
+
+.home .home-content span {
+  color: darkgreen;
+}
+
+/*######## About Section styling ######## */
+.about,
+.services,
+.work,
+.Testimonials,
+.contact,
+footer {
+  font-family: "Poppins", "sans-serif";
+}
+
+.about .tittle::after {
+  content: "Who I Am";
+}
+
+.about .about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about .about-content .left {
+  width: 45%;
+}
+
+.about .about-content .left img {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border: 5px solid darkgreen;
+  border-radius: 20px;
+}
+
+.about .about-content .right {
+  width: 55%;
+}
+
+.about .about-content .right .text {
+  font-size: 25px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.about .about-content .right .text span {
+  color: darkgreen;
+}
+
+.about .about-content .right p {
+  text-align: justify;
+}
+
+.about .about-content .right a {
+  display: inline-block;
+  background: darkgreen;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 30px;
+  margin-top: 20px;
+  font-weight: bolder;
+  border-radius: 6px;
+  border: 2px solid darkgreen;
+  transition: all 0.3s ease;
+}
+.about .about-content .right a:hover {
+  color: darkgreen;
+  background: none;
+}
+
+/*######## Services  Section styling ######## */
+.services .tittle::before {
+  background: #fff;
+}
+
+.services .tittle::after {
+  background: #000;
+  content: "What Can I Do";
+}
+
+.services {
+  background: #000;
+  color: #fff;
+}
+
+.services .services-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.services .services-content .card {
+  width: calc(33% - 20px);
+  text-align: center;
+  background: #221f1f;
+  border-radius: 8px;
+  padding: 20px 25px;
+}
+.services .services-content .card:hover {
+  background: #fff;
+  color: #000;
+}
+
+.services .services-content .card i {
+  font-size: 70px;
+  color: darkgreen;
+}
+
+.services .services-content .card .text {
+  font-size: 20px;
+  font-weight: bolder;
+  margin: 15px;
+}
+
+.services .services-content .card .box {
+  transition: all 0.3s ease;
+}
+.services .services-content .card .box:hover {
+  transform: scale(1.05);
+}
+
+/*######## My Projects  Section styling ######## */
+.work .tittle::after {
+  content: "Previous Work";
+}
+
+.work .work-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.work .work-content .box {
+  height: 20rem;
+  width: 30rem;
+  border-radius: 5px;
+  box-shadow: 0 0 1rem #333;
+  align-items: center;
+  margin: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.8s ease;
+}
+.work .work-content .box:hover {
+  transform: scale(1.05);
+}
+.work .work-content .box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.work .work-content .box button {
+  outline: none;
+  border: none;
+  background: #1eb31e;
+  color: #000;
+  border-radius: 10px;
+  font-size: 2rem;
+  font-weight: bolder;
+  margin: 2rem 0;
+  font-family: "Ubuntu", sans-serif;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  height: 4rem;
+  width: 16rem;
+  z-index: 1;
+}
+.work .work-content .box button:hover {
+  background: #333;
+}
+.work .work-content .box:hover button {
+  top: 40%;
+  color: #fff;
+  transform: translate(-50%, -50%);
+}
+.work .work-content .box:hover img {
+  filter: blur(0.2rem);
+  transform: scale(1);
+}
+
+/*######## Testimonials  Section styling ######## */
+.Testimonials {
+  background: #000;
+  color: #fff;
+}
+
+.Testimonials .tittle::before {
+  background: #fff;
+}
+
+.Testimonials .tittle::after {
+  background: #000;
+  content: "What Customers Say";
+}
+
+.Testimonials .carousel .card {
+  background: #333;
+  border-radius: 10px;
+  padding: 25px 35px;
+  text-align: center;
+  transition: all 0.8s ease;
+}
+.Testimonials .carousel .card:hover {
+  transform: scale(1.05);
+  background: #fff;
+  color: #000;
+}
+
+.Testimonials .carousel .card .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.Testimonials .carousel .card img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 60%;
+  border: 5px solid darkgreen;
+}
+
+.Testimonials .carousel .card .text {
+  font-size: 25px;
+  font-weight: bolder;
+  margin: 10px 0 7px 0;
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none !important;
+  border-radius: 50%;
+  border: 2px solid darkgreen !important;
+  transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+  width: 35px;
+  border-radius: 14px;
+}
+.owl-dot.active:hover {
+  background: darkgreen !important;
+}
+
+/*######## Contact  Section styling ######## */
+.contact .tittle::after {
+  content: "Get In Touch";
+}
+.contact .contact-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact .contact-content .column {
+  width: calc(50% - 30px);
+}
+.contact .contact-content .text {
+  font-size: 20px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+.contact .contact-content .left p {
+  text-align: justify;
+}
+.contact .contact-content .left .icons {
+  margin: 20px 0;
+}
+.contact .contact-content .left .icons .social {
+  font-size: 50px;
+}
+.contact .contact-content .left .icons .social .first,
+.contact .contact-content .left .icons .social .third {
+  color: #0b0b9e;
+}
+.contact .contact-content .left .icons .social .first:hover,
+.contact .contact-content .left .icons .social .third:hover {
+  transition: all 0.3s ease;
+  opacity: 0.5;
+}
+.contact .contact-content .left .icons .social .fourth {
+  color: darkgreen;
+}
+.contact .contact-content .left .icons .social .fourth:hover {
+  transition: all 0.3s ease;
+  opacity: 0.5;
+}
+.contact .contact-content .left .icons .social .second:hover {
+  transition: all 0.3s ease;
+  opacity: 0.5;
+}
+.contact .contact-content .row {
+  display: flex;
+  height: 65px;
+  align-items: center;
+}
+.contact .contact-content .row .info {
+  margin-left: 10px;
+}
+.contact .contact-content .row i {
+  font-size: 25px;
+  color: darkgreen;
+}
+.contact .contact-content .info .head {
+  font-weight: bolder;
+}
+.contact .contact-content .info .sub-title {
+  color: #000;
+}
+.contact .right form .fields {
+  display: flex;
+}
+.contact .right form .fields .field {
+  width: 100%;
+  height: 45px;
+  margin-bottom: 15px;
+}
+.contact .right form .field {
+  width: 100%;
+  height: 45px;
+  margin-bottom: 15px;
+}
+.contact .right form .field input {
+  height: 100%;
+  width: 100%;
+  border: 1px solid #14e714;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+.contact .right form .name {
+  margin-right: 10px;
+}
+.contact .right form .email {
+  margin-left: 10px;
+}
+.contact .right form .textarea {
+  height: 80px;
+  width: 100%;
+}
+.contact .right form .textarea textarea {
+  padding-top: 10px;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #14e714;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+  resize: none;
+}
+.contact .right form .button-area {
+  height: 47px;
+  width: 170px;
+}
+.contact .right form .button-area button {
+  width: 100%;
+  height: 100%;
+  border: 2px solid darkgreen;
+  border-radius: 6px;
+  background: darkgreen;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.contact .right form .button-area button:hover {
+  color: darkgreen;
+  background: none;
+}
+
+/*######## Foooter  Section styling ######## */
+footer {
+  background: #000;
+  color: #fff;
+  padding: 20px 25px;
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+}
+footer a {
+  color: darkgreen;
+  text-decoration: none;
+}
+
+/*######## Responsive Media Query ######## */
+@media (max-width: 1104px) {
+  .about .about-content .left img {
+    height: 350px;
+    width: 350px;
+  }
+
+  .home .home-content .text-1 {
+    font-size: 40px;
+  }
+
+  .home .home-content .text-2 {
+    font-size: 40px;
+  }
+
+  .home .home-content .text-3 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 991px) {
+  .max-width {
+    padding: 0 50px;
+  }
+
+  .home .home-content .text-1 {
+    font-size: 40px;
+  }
+
+  .home .home-content .text-2 {
+    font-size: 40px;
+  }
+
+  .home .home-content .text-3 {
+    font-size: 30px;
+  }
+
+  .services .services-content .card .text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 947px) {
+  .menu-btn {
+    display: block;
+    z-index: 999;
+  }
+
+  .menu-btn i.active:before {
+    content: "\f00d";
+  }
+
+  .navbar .menu {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background: #111;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 80px;
+    transition: all 0.8s ease;
+  }
+
+  .navbar .menu.active {
+    left: 0;
+  }
+
+  .navbar .menu li {
+    display: block;
+  }
+
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 30px;
+  }
+  .navbar .menu li a:hover {
+    color: darkgreen;
+    z-index: 999;
+  }
+
+  .home .home-content .text-1 {
+    font-size: 30px;
+  }
+
+  .home .home-content .text-2 {
+    font-size: 40px;
+  }
+
+  .home .home-content .text-3 {
+    font-size: 30px;
+  }
+
+  .home .home-content a {
+    font-size: 20px;
+    padding: 15px 10px;
+  }
+
+  .max-width {
+    max-width: 800px;
+  }
+
+  .about .about-content .column {
+    width: 100%;
+  }
+
+  .about .about-content .left {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+  }
+
+  .about .about-content .right {
+    flex: 100%;
+  }
+
+  .services .services-content .card .text {
+    font-size: 16px;
+  }
+
+  .services .services-content .card {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
+
+  footer {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .home .home-content .text-1 {
+    font-size: 35px;
+  }
+
+  .home .home-content .text-2 {
+    font-size: 30px;
+  }
+
+  .home .home-content .text-3 {
+    font-size: 30px;
+  }
+
+  .services .services-content .card .text {
+    font-size: 16px;
+  }
+
+  .services .services-content .card,
+.contact .contact-content .column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  footer {
+    font-size: 16px;
+  }
+}
+@media (max-width: 690px) {
+  .max-width {
+    padding: 0 23px;
+  }
+
+  .home .home-content .text-2 {
+    font-size: 40px;
+  }
+
+  .home .home-content .text-3 {
+    font-size: 30px;
+  }
+
+  .home .home-content a {
+    font-size: 20px;
+  }
+
+  .services .services-content .card .text {
+    font-size: 16px;
+  }
+
+  .services .services-content .card {
+    width: 100%;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+}
+@media (max-width: 500px) {
+  .home .home-content .text-2 {
+    font-size: 35px;
+  }
+
+  .home .home-content .text-3 {
+    font-size: 30px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+
+  .services .services-content .card .text {
+    font-size: 16px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
